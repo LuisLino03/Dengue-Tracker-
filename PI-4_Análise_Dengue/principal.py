@@ -13,7 +13,7 @@ st.set_page_config(page_title="Sistema de Ocorrências", layout="wide")
 
 # Lista dos bairros (Mococa)
 BAIRROS = [
-    "ALTOS DO VALE", "ANITA VENTURI PRICOLI", "APARECIDA", "CONJ. HAB. ARY ESTEVAO", "BRÁS",
+    "ALTOS DO VALE", "ALTOS DO VALE 2",  "ANITA VENTURI PRICOLI", "APARECIDA", "CONJ. HAB. ARY ESTEVAO", "BRÁS",
     "CENTRO", "RESIDENCIAL CARLITO QUILICI", "CDHU", "CECAP I", "CECAP II", "CHÁCARA BELA VISTA",
     "JARDIM CHICO PISCINA", "CLUBE DO VALE", "CONJ HABIT GABRIEL DO O", "CONJ. HAB. GILBERTO ROSSETTI",
     "COLINA VERDE", "CONDOMINIO MONTE BELO", "DESCANSO", "DISTRITO INDUSTRIAL 2", "FRANCISCO GARÓFALO",
@@ -505,3 +505,4 @@ with tab_graficos:
             df_idade = df.groupby("faixa_etaria").size().reset_index(name="total")
             fig_idade = px.bar(df_idade, x="faixa_etaria", y="total", color="total", text="total")
             st.plotly_chart(fig_idade, use_container_width=True)
+
